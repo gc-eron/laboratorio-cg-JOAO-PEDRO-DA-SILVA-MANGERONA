@@ -1,5 +1,6 @@
 import streamlit as st
-
-st.title("Computação Gráfica - 2026/10")
-st.header("Aluno: João Pedro da Silva Mangerona")
-st.write("Ambiente configurado com sucesso via uv e Streamlit!")
+paginas = [
+st.Page("src/atv1.py", title="Atv 1"),
+st.Page("src/atv2.py", title="Atv 2"),
+]
+st.navigation(paginas).run()
