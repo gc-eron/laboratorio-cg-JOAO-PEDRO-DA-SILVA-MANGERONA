@@ -1,3 +1,1 @@
-# laboratorio-cg-JOAO-PEDRO-DA-SILVA-MANGERONA
-# laboratorio-cg-JOAO-PEDRO-DA-SILVA-MANGERONA
-# laboratorio-cg-JOAO-PEDRO-DA-SILVA-MANGERONA
+
