@@ -70,3 +70,16 @@ col2.image(img, channels="BGR", caption="foto BGR")
 st.header("4. Tons de cinza")
 col1, col2 = st.columns(2)
 
+# Conversão para float para não estourar o limite de 255
+r = img[:, :, 0].astype(float)
+g = img[:, :, 1].astype(float)
+b = img[:, :, 2].astype(float)
+
+soma = r + g + b
+media = (soma / 3).astype(np.uint8)
+col1.image(media, caption="média")
+
+# faça você: a ponderada na col2
+ponderada = (0.299 * r + 0.587 * g + 0.114 * b).astype(np.uint8)
+col2.image(ponderada, caption="ponderada")
+
