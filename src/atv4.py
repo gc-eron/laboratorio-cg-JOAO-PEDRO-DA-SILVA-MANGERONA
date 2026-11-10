@@ -12,7 +12,10 @@ import streamlit as st
 from PIL import Image
 foto = Image.open("imagens/foto.jpg")
 img = np.array(foto)
-st.image(img)
+col1.image(img)
+col2.text(img.shape)
+col2.text(img[100,100])
+
 
 # 2. Canais
 st.header("2. Canais")
@@ -25,3 +28,4 @@ col1, col2 = st.columns(2)
 # 4. Tons de cinza
 st.header("4. Tons de cinza")
 col1, col2 = st.columns(2)
+
