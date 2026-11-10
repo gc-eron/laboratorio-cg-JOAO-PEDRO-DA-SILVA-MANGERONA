@@ -41,12 +41,30 @@ so_b[:, :, 1] = 0
 col2.image(so_b, caption="só B")
 
 
-
-
-
 # 3. Cubo e BGR
 st.header("3. Cubo e BGR")
 col1, col2 = st.columns(2)
+
+# Vértice 1: Amarelo
+quadrado = np.zeros((80, 80, 3), dtype=np.uint8)
+quadrado[:, :] = (255, 255, 0)
+col1.image(quadrado, caption="amarelo")
+
+# Vértice 2: Vermelho
+quadrado[:, :] = (255, 0, 0)
+col1.image(quadrado, caption="vermelho")
+
+# Vértice 3: Verde
+quadrado[:, :] = (0, 255, 0)
+col1.image(quadrado, caption="verde")
+
+# Vértice 4: Azul
+quadrado[:, :] = (0, 0, 255)
+col1.image(quadrado, caption="azul")
+
+# A foto com channels="BGR" na col2
+col2.image(img, channels="BGR", caption="foto BGR")
+
 
 # 4. Tons de cinza
 st.header("4. Tons de cinza")
