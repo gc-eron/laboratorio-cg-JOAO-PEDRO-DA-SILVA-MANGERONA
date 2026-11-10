@@ -20,6 +20,29 @@ col2.text(img[100,100])
 # 2. Canais
 st.header("2. Canais")
 col1, col2 = st.columns(2)
+col1.image(img[:, :, 0], caption="R")
+col1.image(img[:, :, 1], caption="G")
+col1.image(img[:, :, 2], caption="B")
+
+
+so_r = img.copy()
+so_r[:, :, 1] = 0
+so_r[:, :, 2] = 0
+col2.image(so_r, caption="só R")
+
+so_g = img.copy()
+so_g[:, :, 0] = 0
+so_g[:, :, 2] = 0
+col2.image(so_g, caption="só G")
+
+so_b = img.copy()
+so_b[:, :, 0] = 0
+so_b[:, :, 1] = 0
+col2.image(so_b, caption="só B")
+
+
+
+
 
 # 3. Cubo e BGR
 st.header("3. Cubo e BGR")
